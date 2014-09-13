@@ -1,0 +1,163 @@
+    <!-- Tangle -->
+    <script type="text/javascript" src="Tangle-0.1.0/Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="Tangle-0.1.0/TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="Tangle-0.1.0/TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="Tangle-0.1.0/TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="Tangle-0.1.0/TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="Tangle-0.1.0/TangleKit/TangleKit.js"></script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="matrix2.css">
+
+
+
+
+
+
+<h1>Scaling</h1>
+
+<div class="interpretation">
+  <div>Scale in the x direction by <span data-var="a" class="TKAdjustableNumber">1.4</span></div>
+  <div>Scale in the y direction by <span data-var="d" class="TKAdjustableNumber">0.8</span></div>
+</div>
+
+<div class="formula" style="height: 120px">
+  <div class="matrix">
+    <div class="row">
+      <div><span data-var="a" class="TKAdjustableNumber">1.4</span></div><div>0.0</div>
+    </div>
+    <div class="row">
+      <div>0.0</div><div><span data-var="d" class="TKAdjustableNumber">0.8</span></div>
+    </div>
+  </div>
+  <div class="matrix">
+    <div class="row"><div>x</div></div>
+    <div class="row"><div>y</div></div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix expanded">
+    <div class="row">
+      <div>1.4*x</div><div>0.0*y</div>
+    </div>
+    <div class="row">
+      <div>0.0*x</div><div>0.8*y</div>
+    </div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix">
+    <div class="row"><div>x'</div></div>
+    <div class="row"><div>y'</div></div>
+  </div>
+</div>
+
+
+
+
+
+<h1>Free Transform</h1>
+
+<div class="interpretation">
+  <div>Transform so that</div>
+  <div class="indent">
+    <div>(<span class="number">1</span>, <span class="number">0</span>) moves to (<span class="TKAdjustableNumber">2.4</span>, <span class="TKAdjustableNumber">0.3</span>)</div>
+    <div>(<span class="number">0</span>, <span class="number">1</span>) moves to (<span class="TKAdjustableNumber">-0.2</span>, <span class="TKAdjustableNumber">1.5</span>)</div>
+  </div>
+</div>
+
+<div class="formula" style="height: 120px">
+  <div class="matrix">
+    <div class="row">
+      <div><span class="TKAdjustableNumber">2.4</span></div><div><span class="TKAdjustableNumber">-0.2</span></div>
+    </div>
+    <div class="row">
+      <div><span class="TKAdjustableNumber">0.3</span></div><div><span class="TKAdjustableNumber">1.5</span></div>
+    </div>
+  </div>
+  <div class="matrix">
+    <div class="row"><div>x</div></div>
+    <div class="row"><div>y</div></div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix expanded">
+    <div class="row">
+      <div>2.4*x</div><div>-0.2*y</div>
+    </div>
+    <div class="row">
+      <div>0.3*x</div><div>1.5*y</div>
+    </div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix">
+    <div class="row"><div>x'</div></div>
+    <div class="row"><div>y'</div></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<h1>Rotation</h1>
+
+<div class="interpretation">
+  <div>Rotate by <span class="TKAdjustableNumber">36&deg;</span></div>
+</div>
+
+<div class="formula" style="height: 120px">
+  <div class="matrix">
+    <div class="row">
+      <div>cos <span class="TKAdjustableNumber">36&deg;</span></div><div>sin <span class="TKAdjustableNumber">36&deg;</span></div>
+    </div>
+    <div class="row">
+      <div>-sin <span class="TKAdjustableNumber">36&deg;</span></div><div>cos <span class="TKAdjustableNumber">36&deg;</span></div>
+    </div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix">
+    <div class="row">
+      <div>0.809</div><div>0.588</div>
+    </div>
+    <div class="row">
+      <div>-0.588</div><div>0.809</div>
+    </div>
+  </div>
+</div>
+
+<div class="formula" style="height: 120px">
+  <div class="matrix">
+    <div class="row">
+      <div>0.809</div><div>0.588</div>
+    </div>
+    <div class="row">
+      <div>-0.588</div><div>0.809</div>
+    </div>
+  </div>
+  <div class="matrix">
+    <div class="row"><div>x</div></div>
+    <div class="row"><div>y</div></div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix expanded">
+    <div class="row">
+      <div>0.809*x</div><div>0.588*y</div>
+    </div>
+    <div class="row">
+      <div>-0.588*x</div><div>0.809*y</div>
+    </div>
+  </div>
+  <div class="equals"></div>
+  <div class="matrix">
+    <div class="row"><div>x'</div></div>
+    <div class="row"><div>y'</div></div>
+  </div>
+</div>
+
+

@@ -1,0 +1,146 @@
+body {
+  font-family: lucida grande;
+  line-height: 1.5;
+  margin-left: 340px;
+  color: #333;
+}
+
+
+
+.unselectable{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+
+
+.TKAdjustableNumber, .number {
+  font-family: monospace;
+  font-size: 15px;
+}
+
+
+
+
+
+h1 {
+  margin-top: 100px;
+}
+
+
+
+
+
+
+.interpretation {
+  margin-bottom: 20px;
+}
+.indent {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.formula {
+  font-family: monospace;
+  margin-bottom: 60px;
+}
+
+
+.matrix, .equals{
+  position: relative;
+  height:100%;
+}
+.matrix {
+  display: inline-table;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+.equals {
+  display: inline-block;
+  padding: 10px 0px;
+}
+
+.row {
+  display: table-row;
+}
+
+.row > div {
+  display: table-cell;
+  min-width:50px; height:50px;
+  box-sizing: border-box;
+
+  padding: 0px 10px;
+  background: #eee;
+  position: relative;
+
+  font-size: 15px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.row > div[contenteditable] {
+  outline: 2px solid #bbb;
+  cursor: col-resize;
+}
+
+
+.expanded {
+  border-spacing: 20px 10px;
+}
+.expanded > .row > div:not(:first-child):before{
+  content: '+';
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  width:0px; height:0px;
+  left: -16px;
+}
+
+
+.matrix:before, .matrix:after{
+  content:'';
+  position:absolute;
+  width:20px; height:100%;
+  border: 5px solid #666;
+  top: -5px;
+}
+.matrix:before{
+  left:0;
+  border-right: none;
+}
+.matrix:after{
+  right:0;
+  border-left: none;
+}
+
+
+.equals{
+  width: 60px;
+}
+.equals:after{
+  content: '';
+  width:40px;
+  height:20px;
+  position: absolute;
+  top:0; bottom:0; left:0; right:0;
+  margin:auto;
+  border: 5px solid #666;
+  border-left: none;
+  border-right: none;
+}
+
